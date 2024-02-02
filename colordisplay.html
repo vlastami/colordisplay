@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Color Display</title>
+      <style>
+         .color-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -4px;
+         }
+         .color-box {
+            width: 60px;
+            height: 60px;
+            margin: 4px;
+            border: 1px solid #000;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="color-container"></div>
+
+      <script>
+         const colors = [
+            "#bf3f3f",
+            "#efa675",
+            "#f2edd8",
+            "#bce519",
+            "#aad88c",
+            "#d1f9d1",
+            "#3fbf72",
+            "#75efd7",
+            "#d8edf2",
+            "#196be5",
+            "#8c8cd8",
+            "#e1d1f9",
+            "#a53fbf",
+            "#ef75d7",
+            "#f2d8e2",
+         ];
+
+         const container = document.querySelector(".color-container");
+
+         colors.forEach((color) => {
+            const box = document.createElement("div");
+            box.className = "color-box";
+            box.style.backgroundColor = color;
+            container.appendChild(box);
+         });
+      </script>
+   </body>
+</html>
